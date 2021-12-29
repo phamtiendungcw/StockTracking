@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StockTracking
 {
-    public partial class FrmProductList : Form
+    public partial class FrmCustomerList : Form
     {
-        public FrmProductList()
+        public FrmCustomerList()
         {
             InitializeComponent();
         }
@@ -22,19 +22,9 @@ namespace StockTracking
             this.Close();
         }
 
-        private void txtProductPrice_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = General.isNumber(e);
-        }
-
-        private void txtProductStock_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = General.isNumber(e);
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            FrmProduct frm = new FrmProduct();
+            FrmCustomer frm = new FrmCustomer();
             this.Hide();
             frm.ShowDialog();
             this.Visible = true;

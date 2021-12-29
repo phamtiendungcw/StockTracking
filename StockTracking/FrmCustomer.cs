@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace StockTracking
 {
-    public partial class FrmCategoryList : Form
+    public partial class FrmCustomer : Form
     {
-        public FrmCategoryList()
+        public FrmCustomer()
         {
             InitializeComponent();
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            FrmCategory frm = new FrmCategory();
-            this.Hide();
-            frm.ShowDialog();
-            this.Visible = true;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

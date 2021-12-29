@@ -102,6 +102,30 @@
     <Compile Include="FrmCategoryList.Designer.cs">
       <DependentUpon>FrmCategoryList.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCustomer.Designer.cs">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCustomerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCustomerList.Designer.cs">
+      <DependentUpon>FrmCustomerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDeleted.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDeleted.Designer.cs">
+      <DependentUpon>FrmDeleted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +137,24 @@
     </Compile>
     <Compile Include="FrmProductList.Designer.cs">
       <DependentUpon>FrmProductList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSales.Designer.cs">
+      <DependentUpon>FrmSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSalesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSalesList.Designer.cs">
+      <DependentUpon>FrmSalesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStockAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStockAlert.Designer.cs">
+      <DependentUpon>FrmStockAlert.cs</DependentUpon>
     </Compile>
     <Compile Include="General.cs" />
     <Compile Include="Program.cs" />
@@ -126,11 +168,32 @@
     <EmbeddedResource Include="FrmCategoryList.resx">
       <DependentUpon>FrmCategoryList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCustomer.resx">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCustomerList.resx">
+      <DependentUpon>FrmCustomerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDeleted.resx">
+      <DependentUpon>FrmDeleted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmProduct.resx">
       <DependentUpon>FrmProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProductList.resx">
       <DependentUpon>FrmProductList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSales.resx">
+      <DependentUpon>FrmSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSalesList.resx">
+      <DependentUpon>FrmSalesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStockAlert.resx">
+      <DependentUpon>FrmStockAlert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -140,6 +203,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="DAL\DataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -176,6 +240,14 @@
       <DependentUpon>DataModel.edmx</DependentUpon>
       <LastGenOutput>DataModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Customer1.ico" />
+    <None Include="Resources\Stock.ico" />
+    <None Include="Resources\Sales.ico" />
+    <None Include="Resources\Product.ico" />
+    <None Include="Resources\Exit.ico" />
+    <None Include="Resources\Deleted.ico" />
+    <None Include="Resources\Customer.ico" />
+    <None Include="Resources\Category.ico" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.gridAddStock = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvAddStock = new System.Windows.Forms.DataGridView();
             this.txtProductPrice = new System.Windows.Forms.TextBox();
             this.txtProductName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,19 +42,30 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridAddStock)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAddStock)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dgvAddStock);
+            this.panel1.Controls.Add(this.gridAddStock);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(365, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(267, 349);
             this.panel1.TabIndex = 0;
+            // 
+            // gridAddStock
+            // 
+            this.gridAddStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridAddStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridAddStock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridAddStock.Location = new System.Drawing.Point(0, 89);
+            this.gridAddStock.Name = "gridAddStock";
+            this.gridAddStock.ReadOnly = true;
+            this.gridAddStock.Size = new System.Drawing.Size(267, 260);
+            this.gridAddStock.TabIndex = 1;
             // 
             // panel2
             // 
@@ -83,17 +94,6 @@
             this.label1.Size = new System.Drawing.Size(81, 20);
             this.label1.TabIndex = 11;
             this.label1.Text = "Category";
-            // 
-            // dgvAddStock
-            // 
-            this.dgvAddStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvAddStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAddStock.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvAddStock.Location = new System.Drawing.Point(0, 89);
-            this.dgvAddStock.Name = "dgvAddStock";
-            this.dgvAddStock.ReadOnly = true;
-            this.dgvAddStock.Size = new System.Drawing.Size(267, 260);
-            this.dgvAddStock.TabIndex = 1;
             // 
             // txtProductPrice
             // 
@@ -191,9 +191,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Stock";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridAddStock)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAddStock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,7 +205,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox cmbCategory;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvAddStock;
+        private System.Windows.Forms.DataGridView gridAddStock;
         private System.Windows.Forms.TextBox txtProductPrice;
         private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.Label label2;
