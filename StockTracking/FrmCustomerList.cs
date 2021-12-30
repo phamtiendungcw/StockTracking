@@ -1,4 +1,6 @@
-﻿using System;
+﻿using StockTracking.BLL;
+using StockTracking.DAL.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,9 @@ namespace StockTracking
 {
     public partial class FrmCustomerList : Form
     {
+        private CustomerBLL bll = new CustomerBLL();
+        private CustomerDTO dto = new CustomerDTO();
+
         public FrmCustomerList()
         {
             InitializeComponent();
@@ -28,6 +33,24 @@ namespace StockTracking
             this.Hide();
             frm.ShowDialog();
             this.Visible = true;
+            dto = bll.Select();
+            gridCustomerList.DataSource = dto.Customers;
+        }
+
+        private void FrmCustomerList_Load(object sender, EventArgs e)
+        {
+            dto = bll.Select();
+            gridCustomerList.DataSource = dto.Customers;
+            gridCustomerList.Columns[0].Visible = false;
+            gridCustomerList.Columns[1].HeaderText = "Customer Name";
+
+        }
+
+        private void txtCustomerName_TextChanged(object sender, EventArgs e)
+        {
+            List<CustomerDetailDTO> list = dto.Customers;
+            list = list.Where(x => x.CustomerName.Contains(txtCustomerName.Text)).ToList();
+            gridCustomerList.DataSource = list;
         }
     }
 }
