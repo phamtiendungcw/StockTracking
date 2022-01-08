@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -58,6 +73,7 @@
     <Compile Include="BLL\CategoryBLL.cs" />
     <Compile Include="BLL\CustomerBLL.cs" />
     <Compile Include="BLL\IBLL.cs" />
+    <Compile Include="BLL\ProductBLL.cs" />
     <Compile Include="DAL\CATEGORY.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -67,6 +83,7 @@
     <Compile Include="DAL\DAO\CategoryDAO.cs" />
     <Compile Include="DAL\DAO\CustomerDAO.cs" />
     <Compile Include="DAL\DAO\IDAO.cs" />
+    <Compile Include="DAL\DAO\ProductDAO.cs" />
     <Compile Include="DAL\DAO\StockContext.cs" />
     <Compile Include="DAL\DataModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -87,6 +104,8 @@
     <Compile Include="DAL\DTO\CategoryDTO.cs" />
     <Compile Include="DAL\DTO\CustomerDetailDTO.cs" />
     <Compile Include="DAL\DTO\CustomerDTO.cs" />
+    <Compile Include="DAL\DTO\ProductDetailDTO.cs" />
+    <Compile Include="DAL\DTO\ProductDTO.cs" />
     <Compile Include="DAL\PRODUCT.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -235,18 +254,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="DAL\DataModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DataModel.Context.cs</LastGenOutput>
-      <DependentUpon>DataModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="DAL\DataModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DataModel.edmx</DependentUpon>
-      <LastGenOutput>DataModel.cs</LastGenOutput>
-    </Content>
     <None Include="Resources\Customer1.ico" />
     <None Include="Resources\Stock.ico" />
     <None Include="Resources\Sales.ico" />
@@ -258,6 +266,30 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DAL\DataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DataModel.Context.cs</LastGenOutput>
+      <DependentUpon>DataModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="DAL\DataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DataModel.edmx</DependentUpon>
+      <LastGenOutput>DataModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

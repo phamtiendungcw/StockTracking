@@ -18,6 +18,7 @@ namespace StockTracking.DAL
         public string ProductName { get; set; }
         public int CategoryID { get; set; }
         public int StockAmount { get; set; }
+        public int Price { get; set; }
         public bool isDeleted { get; set; }
         public Nullable<System.DateTime> DeletedDate { get; set; }
     }

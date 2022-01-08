@@ -31,6 +31,7 @@
           <Property Name="ProductName" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="CategoryID" Type="int" Nullable="false" />
           <Property Name="StockAmount" Type="int" Nullable="false" />
+          <Property Name="Price" Type="int" Nullable="false" />
           <Property Name="isDeleted" Type="bit" Nullable="false" />
           <Property Name="DeletedDate" Type="date" />
         </EntityType>
@@ -85,6 +86,7 @@
           <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="CategoryID" Type="Int32" Nullable="false" />
           <Property Name="StockAmount" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
           <Property Name="isDeleted" Type="Boolean" Nullable="false" />
           <Property Name="DeletedDate" Type="DateTime" Precision="0" />
         </EntityType>
@@ -141,6 +143,7 @@
                 <ScalarProperty Name="ProductName" ColumnName="ProductName" />
                 <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
                 <ScalarProperty Name="StockAmount" ColumnName="StockAmount" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
                 <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
               </MappingFragment>
