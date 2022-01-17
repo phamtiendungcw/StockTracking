@@ -14,8 +14,8 @@ namespace StockTracking
 {
     public partial class FrmProductList : Form
     {
-        public ProductBLL bll = new ProductBLL();
-        public ProductDTO dto = new ProductDTO();
+        ProductBLL bll = new ProductBLL();
+        ProductDTO dto = new ProductDTO();
 
         public FrmProductList()
         {
@@ -68,7 +68,7 @@ namespace StockTracking
         private void btnSearch_Click(object sender, EventArgs e)
         {
             List<ProductDetailDTO> list = dto.Products;
-            if (txtProductName.Text.Trim() != null)
+            if (txtProductName.Text.Trim() != "")
                 list = list.Where(x => x.ProductName.Contains(txtProductName.Text)).ToList();
 
             if (cmbCategory.SelectedIndex != -1)

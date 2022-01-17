@@ -11,8 +11,8 @@ namespace StockTracking.BLL
 {
     public class ProductBLL : IBLL<ProductDetailDTO, ProductDTO>
     {
-        public CategoryDAO categorydao = new CategoryDAO();
-        public ProductDAO dao = new ProductDAO();
+        CategoryDAO categorydao = new CategoryDAO();
+        ProductDAO dao = new ProductDAO();
 
         public bool Insert(ProductDetailDTO entity)
         {
@@ -25,7 +25,13 @@ namespace StockTracking.BLL
 
         public bool Update(ProductDetailDTO entity)
         {
-            throw new NotImplementedException();
+            PRODUCT product = new PRODUCT();
+            product.ID = entity.ProductId;
+            product.Price = entity.Price;
+            product.ProductName = entity.ProductName;
+            product.StockAmount = entity.StockAmount;
+            product.CategoryID = entity.CategoryId;
+            return dao.Update(product);
         }
 
         public bool Delete(ProductDetailDTO entity)

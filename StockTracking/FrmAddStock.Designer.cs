@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.gridAddStock = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,9 +40,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.gridAddStock = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridAddStock)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridAddStock)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -51,21 +51,10 @@
             this.panel1.Controls.Add(this.gridAddStock);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(365, 0);
+            this.panel1.Location = new System.Drawing.Point(322, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(267, 349);
+            this.panel1.Size = new System.Drawing.Size(310, 349);
             this.panel1.TabIndex = 0;
-            // 
-            // gridAddStock
-            // 
-            this.gridAddStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridAddStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridAddStock.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridAddStock.Location = new System.Drawing.Point(0, 89);
-            this.gridAddStock.Name = "gridAddStock";
-            this.gridAddStock.ReadOnly = true;
-            this.gridAddStock.Size = new System.Drawing.Size(267, 260);
-            this.gridAddStock.TabIndex = 1;
             // 
             // panel2
             // 
@@ -74,7 +63,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(267, 89);
+            this.panel2.Size = new System.Drawing.Size(310, 89);
             this.panel2.TabIndex = 0;
             // 
             // cmbCategory
@@ -84,6 +73,7 @@
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(159, 21);
             this.cmbCategory.TabIndex = 0;
+            this.cmbCategory.SelectedIndexChanged += new System.EventHandler(this.cmbCategory_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -172,6 +162,19 @@
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // gridAddStock
+            // 
+            this.gridAddStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridAddStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridAddStock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridAddStock.Location = new System.Drawing.Point(0, 89);
+            this.gridAddStock.Name = "gridAddStock";
+            this.gridAddStock.ReadOnly = true;
+            this.gridAddStock.Size = new System.Drawing.Size(310, 260);
+            this.gridAddStock.TabIndex = 2;
+            this.gridAddStock.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridAddStock_RowEnter);
             // 
             // FrmAddStock
             // 
@@ -190,10 +193,11 @@
             this.Name = "FrmAddStock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Stock";
+            this.Load += new System.EventHandler(this.FrmAddStock_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridAddStock)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridAddStock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,7 +209,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox cmbCategory;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView gridAddStock;
         private System.Windows.Forms.TextBox txtProductPrice;
         private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.Label label2;
@@ -214,5 +217,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.DataGridView gridAddStock;
     }
 }
