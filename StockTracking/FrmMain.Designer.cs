@@ -42,7 +42,6 @@
             this.btnDeleted.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnDeleted.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleted.Image = global::StockTracking.Properties.Resources.Deleted;
-            this.btnDeleted.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnDeleted.Location = new System.Drawing.Point(272, 150);
             this.btnDeleted.Name = "btnDeleted";
             this.btnDeleted.Size = new System.Drawing.Size(93, 110);
@@ -57,7 +56,6 @@
             this.btnSales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSales.Image = global::StockTracking.Properties.Resources.Sales;
-            this.btnSales.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSales.Location = new System.Drawing.Point(272, 20);
             this.btnSales.Name = "btnSales";
             this.btnSales.Size = new System.Drawing.Size(93, 110);
@@ -85,7 +83,6 @@
             this.btnCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategory.Image = global::StockTracking.Properties.Resources.Category;
-            this.btnCategory.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCategory.Location = new System.Drawing.Point(152, 150);
             this.btnCategory.Name = "btnCategory";
             this.btnCategory.Size = new System.Drawing.Size(93, 110);
@@ -100,7 +97,6 @@
             this.btnProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProduct.Image = global::StockTracking.Properties.Resources.Product;
-            this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnProduct.Location = new System.Drawing.Point(152, 20);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Size = new System.Drawing.Size(93, 110);
@@ -115,7 +111,6 @@
             this.btnAddStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnAddStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddStock.Image = global::StockTracking.Properties.Resources.Stock;
-            this.btnAddStock.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAddStock.Location = new System.Drawing.Point(32, 150);
             this.btnAddStock.Name = "btnAddStock";
             this.btnAddStock.Size = new System.Drawing.Size(93, 110);
@@ -130,7 +125,6 @@
             this.btnCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomer.Image = global::StockTracking.Properties.Resources.Customer1;
-            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCustomer.Location = new System.Drawing.Point(32, 20);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Size = new System.Drawing.Size(93, 110);
