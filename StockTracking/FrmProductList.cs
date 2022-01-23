@@ -16,6 +16,7 @@ namespace StockTracking
     {
         ProductBLL bll = new ProductBLL();
         ProductDTO dto = new ProductDTO();
+        ProductDetailDTO detail = new ProductDetailDTO();
 
         public FrmProductList()
         {
@@ -117,6 +118,35 @@ namespace StockTracking
             rbPriceLess.Checked = false;
             rbPriceMore.Checked = false;
             gridProductList.DataSource = dto.Products;
+        }
+
+        private void gridProductList_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            detail = new ProductDetailDTO();
+            detail.ProductId = Convert.ToInt32(gridProductList.Rows[e.RowIndex].Cells[4].Value);
+            detail.CategoryId = Convert.ToInt32(gridProductList.Rows[e.RowIndex].Cells[5].Value);
+            detail.ProductName = gridProductList.Rows[e.RowIndex].Cells[0].Value.ToString();
+            detail.Price = Convert.ToInt32(gridProductList.Rows[e.RowIndex].Cells[3].Value);
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (detail.ProductId == 0)
+                MessageBox.Show("Please select a product from table");
+            else
+            {
+                FrmProduct frm = new FrmProduct();
+                frm.isUpdate = true;
+                frm.detail = detail;
+                frm.dto = dto;
+                this.Hide();
+                frm.ShowDialog();
+                this.Visible = true;
+                bll = new ProductBLL();
+                dto = bll.Select();
+                gridProductList.DataSource = dto.Products;
+                CleanFilter();
+            }
         }
     }
 }

@@ -16,6 +16,7 @@ namespace StockTracking
     {
         SalesBLL bll = new SalesBLL();
         SalesDTO dto = new SalesDTO();
+        SalesDetailDTO detail = new SalesDetailDTO();
 
         public FrmSalesList()
         {
@@ -130,6 +131,37 @@ namespace StockTracking
             chDate.Checked = false;
             cmbCategory.SelectedIndex = -1;
             gridSalesList.DataSource = dto.Sales;
+        }
+
+        private void gridSalesList_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            detail = new SalesDetailDTO();
+            detail.SalesId = Convert.ToInt32(gridSalesList.Rows[e.RowIndex].Cells[10].Value);
+            detail.ProductId = Convert.ToInt32(gridSalesList.Rows[e.RowIndex].Cells[4].Value);
+            detail.CustomerName = gridSalesList.Rows[e.RowIndex].Cells[0].Value.ToString();
+            detail.ProductName = gridSalesList.Rows[e.RowIndex].Cells[1].Value.ToString();
+            detail.Price = Convert.ToInt32(gridSalesList.Rows[e.RowIndex].Cells[7].Value);
+            detail.SalesAmount = Convert.ToInt32(gridSalesList.Rows[e.RowIndex].Cells[6].Value);
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (detail.SalesId == 0)
+                MessageBox.Show("Please select sales from table");
+            else
+            {
+                FrmSales frm = new FrmSales();
+                frm.isUpdate = true;
+                frm.detail = detail;
+                frm.dto = dto;
+                this.Hide();
+                frm.ShowDialog();
+                this.Visible = true;
+                bll = new SalesBLL();
+                dto = bll.Select();
+                gridSalesList.DataSource = dto.Sales;
+                CleanFilters();
+            }
         }
     }
 }

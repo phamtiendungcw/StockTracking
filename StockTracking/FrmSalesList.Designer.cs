@@ -406,6 +406,7 @@
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // gridSalesList
             // 
@@ -417,6 +418,7 @@
             this.gridSalesList.ReadOnly = true;
             this.gridSalesList.Size = new System.Drawing.Size(946, 257);
             this.gridSalesList.TabIndex = 2;
+            this.gridSalesList.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSalesList_RowEnter);
             // 
             // FrmSalesList
             // 
