@@ -81,6 +81,7 @@
             this.gridCategoryList.ReadOnly = true;
             this.gridCategoryList.Size = new System.Drawing.Size(518, 328);
             this.gridCategoryList.TabIndex = 2;
+            this.gridCategoryList.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridCategoryList_RowEnter);
             // 
             // panel2
             // 
@@ -135,6 +136,7 @@
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // FrmCategoryList
             // 
