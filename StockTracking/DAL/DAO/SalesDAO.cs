@@ -111,6 +111,17 @@ namespace StockTracking.DAL.DAO
 
                     db.SaveChanges();
                 }
+                else if (entity.CustomerID != 0)
+                {
+                    List<SALE> sales = db.SALES.Where(x => x.CustomerID == entity.CustomerID).ToList();
+                    foreach (var item in sales)
+                    {
+                        item.isDeleted = true;
+                        item.DeletedDate = DateTime.Today;
+                    }
+
+                    db.SaveChanges();
+                }
 
                 return true;
             }
