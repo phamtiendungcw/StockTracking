@@ -163,5 +163,26 @@ namespace StockTracking
                 CleanFilters();
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if(detail.SalesId==0)
+                MessageBox.Show("Please select a sales from table");
+            else
+            {
+                DialogResult rs = MessageBox.Show("Are you sure?", "Warning!!", MessageBoxButtons.YesNo);
+                if (rs == DialogResult.Yes)
+                {
+                    if (bll.Delete(detail))
+                    {
+                        MessageBox.Show("Sales was deleted");
+                        bll = new SalesBLL();
+                        dto = bll.Select();
+                        gridSalesList.DataSource = dto.Sales;
+                        CleanFilters();
+                    }
+                }
+            }
+        }
     }
 }
