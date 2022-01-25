@@ -11,7 +11,8 @@ namespace StockTracking.BLL
 {
     public class CategoryBLL : IBLL<CategoryDetailDTO, CategoryDTO>
     {
-        private CategoryDAO dao = new CategoryDAO();
+        CategoryDAO dao = new CategoryDAO();
+        ProductDAO productdao = new ProductDAO();
         public bool Insert(CategoryDetailDTO entity)
         {
             CATEGORY category = new CATEGORY();
@@ -29,7 +30,13 @@ namespace StockTracking.BLL
 
         public bool Delete(CategoryDetailDTO entity)
         {
-            throw new NotImplementedException();
+            CATEGORY category = new CATEGORY();
+            category.ID = entity.Id;
+            dao.Delete(category);
+            PRODUCT product = new PRODUCT();
+            product.CategoryID = entity.Id;
+            productdao.Delete(product);
+            return true;
         }
 
         public CategoryDTO Select()

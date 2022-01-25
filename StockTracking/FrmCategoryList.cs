@@ -78,5 +78,26 @@ namespace StockTracking
             }
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (detail.Id == 0)
+                MessageBox.Show("Please select a category from table");
+            else
+            {
+                DialogResult rs = MessageBox.Show("Are you sure?", "Warning!!", MessageBoxButtons.YesNo);
+                if (rs == DialogResult.Yes)
+                {
+                    if (bll.Delete(detail))
+                    {
+                        MessageBox.Show("Category was deleted");
+                        bll = new CategoryBLL();
+                        dto = bll.Select();
+                        gridCategoryList.DataSource = dto.Categories;
+                        txtCategoryName.Clear();
+                    }
+                }
+            }
+        }
     }
 }
