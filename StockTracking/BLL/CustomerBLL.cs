@@ -48,7 +48,7 @@ namespace StockTracking.BLL
 
         public bool GetBack(CustomerDetailDTO entity)
         {
-            throw new NotImplementedException();
+            return dao.GetBack(entity.Id);
         }
     }
 }

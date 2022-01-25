@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.gridDeleted = new System.Windows.Forms.DataGridView();
             this.cmbDeletedData = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnGetBack = new System.Windows.Forms.Button();
+            this.gridDeleted = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridDeleted)).BeginInit();
@@ -50,27 +50,6 @@
             this.panel1.Size = new System.Drawing.Size(800, 100);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnClose);
-            this.panel2.Controls.Add(this.btnGetBack);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 350);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 100);
-            this.panel2.TabIndex = 1;
-            // 
-            // gridDeleted
-            // 
-            this.gridDeleted.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridDeleted.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridDeleted.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridDeleted.Location = new System.Drawing.Point(0, 100);
-            this.gridDeleted.Name = "gridDeleted";
-            this.gridDeleted.ReadOnly = true;
-            this.gridDeleted.Size = new System.Drawing.Size(800, 250);
-            this.gridDeleted.TabIndex = 2;
-            // 
             // cmbDeletedData
             // 
             this.cmbDeletedData.FormattingEnabled = true;
@@ -78,6 +57,7 @@
             this.cmbDeletedData.Name = "cmbDeletedData";
             this.cmbDeletedData.Size = new System.Drawing.Size(159, 21);
             this.cmbDeletedData.TabIndex = 0;
+            this.cmbDeletedData.SelectedIndexChanged += new System.EventHandler(this.cmbDeletedData_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -88,6 +68,16 @@
             this.label1.Size = new System.Drawing.Size(116, 20);
             this.label1.TabIndex = 11;
             this.label1.Text = "Deleted Data";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnClose);
+            this.panel2.Controls.Add(this.btnGetBack);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 350);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 100);
+            this.panel2.TabIndex = 1;
             // 
             // btnClose
             // 
@@ -109,6 +99,19 @@
             this.btnGetBack.TabIndex = 0;
             this.btnGetBack.Text = "Get Back";
             this.btnGetBack.UseVisualStyleBackColor = true;
+            this.btnGetBack.Click += new System.EventHandler(this.btnGetBack_Click);
+            // 
+            // gridDeleted
+            // 
+            this.gridDeleted.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridDeleted.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridDeleted.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridDeleted.Location = new System.Drawing.Point(0, 100);
+            this.gridDeleted.Name = "gridDeleted";
+            this.gridDeleted.ReadOnly = true;
+            this.gridDeleted.Size = new System.Drawing.Size(800, 250);
+            this.gridDeleted.TabIndex = 2;
+            this.gridDeleted.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridDeleted_RowEnter);
             // 
             // FrmDeleted
             // 

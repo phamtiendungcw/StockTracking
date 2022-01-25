@@ -64,6 +64,7 @@ namespace StockTracking
             gridProductList.Columns[3].HeaderText = "Price";
             gridProductList.Columns[4].Visible = false;
             gridProductList.Columns[5].Visible = false;
+            gridProductList.Columns[6].Visible = false;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

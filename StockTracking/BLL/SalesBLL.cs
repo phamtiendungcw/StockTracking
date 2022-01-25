@@ -70,9 +70,25 @@ namespace StockTracking.BLL
             return dto;
         }
 
+        public SalesDTO Select(bool isDeleted)
+        {
+            SalesDTO dto = new SalesDTO();
+            dto.Products = productdao.Select(isDeleted);
+            dto.Customers = customerdao.Select(isDeleted);
+            dto.Categories = categorydao.Select(isDeleted);
+            dto.Sales = dao.Select(isDeleted);
+            return dto;
+        }
+
         public bool GetBack(SalesDetailDTO entity)
         {
-            throw new NotImplementedException();
+            dao.GetBack(entity.SalesId);
+            PRODUCT product = new PRODUCT();
+            product.ID = entity.ProductId;
+            int temp = entity.StockAmount - entity.SalesAmount;
+            product.StockAmount = temp;
+            productdao.Update(product);
+            return true;
         }
     }
 }

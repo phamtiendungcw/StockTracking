@@ -65,6 +65,9 @@ namespace StockTracking
             gridSalesList.Columns[5].Visible = false;
             gridSalesList.Columns[9].Visible = false;
             gridSalesList.Columns[10].Visible = false;
+            gridSalesList.Columns[11].Visible = false;
+            gridSalesList.Columns[12].Visible = false;
+            gridSalesList.Columns[13].Visible = false;
             cmbCategory.DataSource = dto.Categories;
             cmbCategory.DisplayMember = "CategoryName";
             cmbCategory.ValueMember = "ID";
